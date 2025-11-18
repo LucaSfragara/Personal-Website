@@ -1,3 +1,11 @@
+export interface ContactInfo {
+  name: string;
+  email: string;
+  github: string;
+  linkedin: string;
+  twitter?: string;
+}
+
 export interface Experience {
   id: string;
   title: string;
@@ -18,6 +26,13 @@ export interface Project {
   github?: string;
   image?: string;
 }
+
+export const contactInfo: ContactInfo = {
+  name: 'Luca Sfragara',
+  email: 'lsfragar@mit.edu',
+  github: 'https://github.com/LucaSfragara',
+  linkedin: 'https://linkedin.com/in/lucasfragara',
+};
 
 export const experiences: Experience[] = [
   {

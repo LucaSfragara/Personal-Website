@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import ExperienceCard from '@/components/ExperienceCard'
-import { experiences } from '@/lib/data'
+import { experiences, contactInfo } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4"
             >
-              Lucas Fragara
+              {contactInfo.name}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function Home() {
               className="flex gap-5"
             >
               <a
-                href="https://github.com"
+                href={contactInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-foreground hover:-translate-y-0.5 transition-all"
@@ -75,7 +75,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href={contactInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-foreground hover:-translate-y-0.5 transition-all"
@@ -86,7 +86,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@lucasfragara.com"
+                href={`mailto:${contactInfo.email}`}
                 className="text-muted hover:text-foreground hover:-translate-y-0.5 transition-all"
                 aria-label="Email"
               >
