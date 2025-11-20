@@ -36,7 +36,7 @@ export default function Home() {
               className="text-lg text-muted leading-relaxed mb-8"
             >
               Master student at MIT in Data Science. Previously graduated with honors in Economics and Computer Science from Bocconi University. <br /><br />
-              At MIT, I work with Professor <a href="https://orc.mit.edu/faculty_person/georgia-perakis/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Georgia Perakis</a> on causal inference and reinforcement learning. <br /><br />
+              At MIT, I work with Professor <a href="https://orc.mit.edu/faculty_person/georgia-perakis/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Georgia Perakis</a> on causal inference and machine learning. <br /><br />
               Previously, I built production LLM systems at Deutsche Bank, led a 20-person sales team at JEME generating €200k+/year, and consulted for a leading luxury brand at BCG.
             </motion.p>
     
