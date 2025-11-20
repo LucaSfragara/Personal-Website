@@ -8,8 +8,8 @@ export default function Contact() {
   const githubUsername = contactInfo.github.split('/').pop() || ''
 
   return (
-    <div className="pt-32 pb-20 px-6">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-[calc(100vh-theme(spacing.16))] flex items-center pt-20 pb-10 px-6">
+      <div className="max-w-5xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,8 +19,7 @@ export default function Contact() {
           <h1 className="text-4xl font-bold mb-6">Get in Touch</h1>
           <p className="text-muted leading-relaxed mb-8">
             Have a project in mind, want to collaborate, or just want to say
-            hello? I&apos;d love to hear from you. Feel free to reach out through
-            any of the channels below.
+            hello? Feel free to reach out through any of the channels below.
           </p>
 
           <div className="space-y-6">

@@ -9,6 +9,14 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const statusConfig = {
+    'completed': { label: 'Completed', className: 'bg-green-100 text-green-700' },
+    'in-progress': { label: 'In Progress', className: 'bg-yellow-100 text-yellow-700' },
+    'planned': { label: 'Planned', className: 'bg-blue-100 text-blue-700' },
+  }
+
+  const status = statusConfig[project.status]
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -17,8 +25,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       className="group bg-white rounded-lg border border-border overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
     >
       {/* Image placeholder */}
-      <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+      <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
         <span className="text-muted font-medium">{project.title}</span>
+        {/* Status badge */}
+        <span className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-medium ${status.className}`}>
+          {status.label}
+        </span>
       </div>
 
       {/* Content */}

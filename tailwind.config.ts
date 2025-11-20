@@ -12,7 +12,7 @@ const config: Config = {
         background: '#fafafa',
         foreground: '#1a1a1a',
         muted: '#666666',
-        accent: '#2563eb',
+        accent: '#404040',
         border: '#e5e5e5',
       },
       fontFamily: {

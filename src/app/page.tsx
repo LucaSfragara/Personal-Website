@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import ExperienceCard from '@/components/ExperienceCard'
-import { experiences, contactInfo } from '@/lib/data'
+import EducationCard from '@/components/EducationCard'
+import { experiences, education, skills, contactInfo } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-xl text-accent font-medium mb-4"
             >
-              Building things that matter
+              Data Science @ Massachusetts Institute of Technology
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -34,29 +35,11 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-muted leading-relaxed mb-8"
             >
-              Developer and creator passionate about crafting digital experiences
-              that make a difference. I build software that solves real problems
-              with clean code and thoughtful design.
+              Master student at MIT in Data Science. Previously graduated with honors in Economics and Computer Science from Bocconi University. <br /><br />
+              At MIT, I work with Professor <a href="https://orc.mit.edu/faculty_person/georgia-perakis/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Georgia Perakis</a> on causal inference and reinforcement learning. <br /><br />
+              Previously, I built production LLM systems at Deutsche Bank, led a 20-person sales team at JEME generating €200k+/year, and consulted for a leading luxury brand at BCG.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-4 mb-8"
-            >
-              <Link
-                href="/projects"
-                className="px-6 py-3 bg-foreground text-background rounded-lg font-medium hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
-              >
-                View My Work
-              </Link>
-              <Link
-                href="/contact"
-                className="px-6 py-3 border border-border rounded-lg font-medium hover:border-foreground hover:-translate-y-0.5 transition-all duration-300"
-              >
-                Get in Touch
-              </Link>
-            </motion.div>
+    
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -99,25 +82,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="px-6 py-20">
+      {/* Research Section */}
+      <section className="px-6 py-4" style={{ paddingTop: '0rem', marginTop: '0rem' }}>
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <div className="flex items-center justify-between mb-10">
-              <h2 className="text-2xl font-bold">Experience</h2>
-              <Link
-                href="/about"
-                className="text-sm font-medium text-accent hover:opacity-70 transition-opacity"
-              >
-                View Full Background
-              </Link>
-            </div>
+            <h2 className="text-2xl font-bold mb-6">Research</h2>
             <div className="space-y-0">
-              {experiences.map((experience, index) => (
+              {experiences.filter(exp => exp.id === '1').map((experience, index) => (
                 <ExperienceCard
                   key={experience.id}
                   experience={experience}
@@ -129,8 +104,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section id="experience" className="px-6 py-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <h2 className="text-2xl font-bold mb-6">Experience</h2>
+            <div className="space-y-0">
+              {experiences.filter(exp => exp.id !== '1').map((experience, index) => (
+                <ExperienceCard
+                  key={experience.id}
+                  experience={experience}
+                  index={index}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="px-6 py-4">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+          >
+            <h2 className="text-2xl font-bold mb-6">Education</h2>
+            <div className="space-y-0">
+              {education.map((edu, index) => (
+                <EducationCard
+                  key={edu.id}
+                  education={edu}
+                  index={index}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="px-6 py-12 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <h2 className="text-2xl font-bold mb-6">Skills & Technologies</h2>
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill, index) => (
+                <motion.span
+                  key={skill}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.9 + index * 0.05 }}
+                  className="px-4 py-2 bg-white border border-border rounded-full text-sm font-medium hover:bg-foreground hover:text-background transition-colors cursor-default"
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="px-6 py-20 bg-gray-50">
+      <section className="px-6 py-12 bg-gray-50">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -139,17 +184,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl font-bold mb-4">
-              Interested in working together?
+              Interested in collaborating?
             </h2>
-            <p className="text-muted mb-8 max-w-md mx-auto">
-              I&apos;m always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
-            </p>
             <Link
               href="/contact"
               className="inline-block px-8 py-4 bg-foreground text-background rounded-lg font-medium hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
             >
-              Get in Touch
+              Get in Touch!
             </Link>
           </motion.div>
         </div>
