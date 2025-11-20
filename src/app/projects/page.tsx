@@ -1,8 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import ProjectCard from '@/components/ProjectCard'
-import { projects } from '@/lib/data'
 
 export default function Projects() {
   return (
@@ -22,12 +20,24 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid gap-6 sm:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </div>
+        {/* Under Construction */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-col items-center justify-center py-20"
+        >
+          <div className="w-20 h-20 mb-6 text-muted">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M12 6v6l4 2" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+          </div>
+          <h2 className="text-2xl font-semibold mb-2">Under Construction</h2>
+          <p className="text-muted text-center max-w-md">
+            I&apos;m currently working on documenting my projects. Check back soon for updates!
+          </p>
+        </motion.div>
       </div>
     </div>
   )
