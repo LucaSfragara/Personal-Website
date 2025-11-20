@@ -2,13 +2,13 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import CommandMenu from './CommandMenu'
 
 export default function Navbar() {
   const pathname = usePathname()
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
     { href: '/contact', label: 'Contact' },
   ]
@@ -22,20 +22,23 @@ export default function Navbar() {
         >
           LF
         </Link>
-        <div className="flex gap-8">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-foreground ${
-                pathname === link.href
-                  ? 'text-foreground'
-                  : 'text-muted'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="flex items-center gap-6">
+          <div className="flex gap-8">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors hover:text-foreground ${
+                  pathname === link.href
+                    ? 'text-foreground'
+                    : 'text-muted'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <CommandMenu />
         </div>
       </div>
     </nav>

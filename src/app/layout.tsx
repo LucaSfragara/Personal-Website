@@ -5,8 +5,32 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Lucas Fragara',
-  description: 'Developer and creator building things that matter',
+  title: 'Luca Sfragara',
+  description: 'Master student at MIT in Data Science and Machine Learning',
+  icons: {
+    icon: [
+      {
+        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-family="system-ui" font-weight="bold">LF</text></svg>',
+        type: 'image/svg+xml',
+      },
+    ],
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Luca Sfragara',
+  jobTitle: 'MIT MBAn Student & Machine Learning Researcher',
+  affiliation: {
+    '@type': 'Organization',
+    name: 'MIT',
+  },
+  url: 'https://www.lucasfragara.com',
+  sameAs: [
+    'https://www.linkedin.com/in/lucasfragara',
+    'https://github.com/LucaSfragara',
+  ],
 }
 
 export default function RootLayout({
@@ -16,6 +40,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={inter.className}>
         <main className="min-h-screen">
           {children}
