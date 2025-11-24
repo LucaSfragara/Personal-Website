@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -8,8 +9,24 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Luca Sfragara',
-  description: 'Master student at MIT in Data Science and Machine Learning',
+  title: 'Luca Sfragara | MIT Data Science & Machine Learning',
+  description: 'MIT MBAn student specializing in Data Science and Machine Learning. Researching causal inference and machine learning with Prof. Georgia Perakis. Previously at BCG and Deutsche Bank',
+  keywords: ['Luca Sfragara', 'MIT', 'Data Science', 'Machine Learning', 'Causal Inference', 'Reinforcement Learning', 'BCG', 'Deutsche Bank', 'Bocconi University', 'Operations Research'],
+  authors: [{ name: 'Luca Sfragara' }],
+  creator: 'Luca Sfragara',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://lucasfragara.com',
+    siteName: 'Luca Sfragara',
+    title: 'Luca Sfragara | MIT Data Science & Machine Learning',
+    description: 'MIT MBAn student specializing in Data Science and Machine Learning. Previously at BCG and Deutsche Bank',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luca Sfragara | MIT Data Science & Machine Learning',
+    description: 'MIT MBAn student specializing in Data Science and Machine Learning. Previously at BCG and Deutsche Bank',
+  },
   icons: {
     icon: [
       {
@@ -56,6 +73,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
