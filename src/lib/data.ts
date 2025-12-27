@@ -28,6 +28,8 @@ export interface Project {
   link?: string;
   github?: string;
   image?: string;
+  report?: string;
+  youtube?: string;
 }
 
 export interface Education {
@@ -145,48 +147,83 @@ export const education: Education[] = [
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Project Alpha',
-    description: 'A full-stack application that solves a real-world problem. Built with modern technologies and best practices for scalability and maintainability.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
-    status: 'completed',
-    link: 'https://project-alpha.com',
-    github: 'https://github.com/username/project-alpha',
+    title: 'SfraLM',
+    description: 'Custom built LLM - ongoing project. Code for pretraining, mid-training and post training an LLM (SFT & RL) on a HPC cluster. Implements experimenting, logging and evals.',
+    tags: ['Python', 'PyTorch', 'LLM', 'HPC'],
+    status: 'in-progress',
+    github: 'https://github.com/LucaSfragara/SfraLM',
   },
   {
     id: '2',
-    title: 'Developer Tool',
-    description: 'An open-source CLI tool that automates repetitive development tasks. Used by hundreds of developers daily.',
-    tags: ['TypeScript', 'CLI', 'Open Source'],
-    status: 'in-progress',
-    github: 'https://github.com/username/dev-tool',
+    title: 'SfraTorch',
+    description: 'Implements key PyTorch functionalities from scratch with the philosophy "What I cannot build, I cannot understand". Includes autograd, neural network layers, transformers, and ASR models.',
+    tags: ['Python', 'Deep Learning', 'From Scratch'],
+    status: 'completed',
+    github: 'https://github.com/LucaSfragara/SfraTorch',
   },
   {
     id: '3',
-    title: 'Mobile App',
-    description: 'A cross-platform mobile application with offline-first architecture and real-time synchronization capabilities.',
-    tags: ['React Native', 'Firebase', 'Redux'],
+    title: 'StableSFTData',
+    description: 'Sample-efficient LLM fine-tuning for math reasoning: training on hard examples outperforms random selection under fixed compute budgets.',
+    tags: ['Python', 'LLM', 'Fine-tuning', 'LoRA'],
     status: 'completed',
-    link: 'https://app-store-link.com',
+    github: 'https://github.com/LucaSfragara/StableSFTData',
+    report: 'https://github.com/LucaSfragara/StableSFTData/blob/main/Report.pdf',
   },
   {
     id: '4',
-    title: 'AI Experiment',
-    description: 'An exploration of machine learning techniques applied to a creative problem. Combines technical depth with artistic expression.',
-    tags: ['Python', 'TensorFlow', 'Computer Vision'],
-    status: 'in-progress',
-    github: 'https://github.com/username/ai-experiment',
+    title: 'The Hidden Grammar',
+    description: 'BSc thesis exploring how transformers learn syntax. Training GPT-2 on formal grammars and probing hidden representations to uncover where hierarchical structure emerges.',
+    tags: ['Python', 'PyTorch', 'Transformers', 'NLP'],
+    status: 'completed',
+    github: 'https://github.com/LucaSfragara/Thesis',
+    report: 'https://github.com/LucaSfragara/Thesis/blob/master/Thesis%20%20Final.pdf',
+  },
+  {
+    id: '5',
+    title: 'xAI Hackathon Project',
+    description: 'AI-powered news-to-podcast converter. Curate articles and generate personalized audio briefings in ~30 seconds with morning news mode and debate mode using Grok Voice API.',
+    tags: ['TypeScript', 'React', 'Electron', 'Grok API'],
+    status: 'completed',
+    github: 'https://github.com/LucaSfragara/xAI-hackathon-public',
+    youtube: 'https://www.youtube.com/watch?v=fPvt2M6E7nA',
+  },
+  {
+    id: '6',
+    title: 'Social Bias in SSMs',
+    description: 'Examines social biases in State Space Models (Mamba) versus transformers across multiple demographics (race, gender, profession, religion), applying debiasing techniques with LoRA.',
+    tags: ['Python', 'Mamba', 'Bias Analysis', 'LoRA'],
+    status: 'completed',
+    github: 'https://github.com/LucaSfragara/social-bias-SSMs',
+    report: 'https://github.com/LucaSfragara/social-bias-SSMs/blob/main/Final_Report.pdf',
   },
 ];
 
 export const skills = [
+  // Languages
+  'Python',
   'TypeScript',
-  'JavaScript',
+  'SQL',
+  // ML/DL Frameworks
+  'PyTorch',
+  'Transformers',
+  'LangChain',
+  // ML Techniques
+  'LLMs',
+  'Fine-tuning (LoRA/SFT)',
+  'RAG Pipelines',
+  'Causal Inference',
+  'Reinforcement Learning',
+  // Data & Cloud
+  'Databricks',
+  'GCP',
+  'Elastic Search',
+  'HPC Clusters',
+  // Web
   'React',
   'Next.js',
-  'Node.js',
-  'Python',
-  'PostgreSQL',
-  'AWS',
-  'Docker',
+  'Electron',
+  // Tools
   'Git',
+  'W&B',
 ];
