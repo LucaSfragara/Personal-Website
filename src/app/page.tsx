@@ -36,7 +36,7 @@ export default function Home() {
               className="text-lg text-muted leading-relaxed mb-8"
             >
               Master student at MIT in Data Science. Previously graduated with honors in Economics and Computer Science from Bocconi University. <br /><br />
-              At MIT, I work with Professor <a href="https://orc.mit.edu/faculty_person/georgia-perakis/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Georgia Perakis</a> on causal inference and machine learning. <br /><br />
+              At MIT, I work with Professor <a href="https://orc.mit.edu/faculty_person/georgia-perakis/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Georgia Perakis</a> on causal inference and reinforcement learning for LLM post-training. <br /><br />
               Previously, I built production LLM systems at Deutsche Bank, led a 20-person sales team at JEME generating €200k+/year, and consulted for a leading luxury brand at BCG.
             </motion.p>
     
@@ -44,7 +44,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex gap-5"
+              className="flex gap-5 pb-8 md:pb-0"
             >
               <a
                 href={contactInfo.github}

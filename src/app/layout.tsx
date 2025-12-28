@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Luca Sfragara | MIT Data Science & Machine Learning',
-  description: 'MIT MBAn student specializing in Data Science and Machine Learning. Researching causal inference and machine learning with Prof. Georgia Perakis. Previously at BCG and Deutsche Bank',
+  description: 'MIT student specializing in Data Science and Machine Learning. Researching causal inference and machine learning with Prof. Georgia Perakis. Previously at BCG and Deutsche Bank',
   keywords: ['Luca Sfragara', 'MIT', 'Data Science', 'Machine Learning', 'Causal Inference', 'Reinforcement Learning', 'BCG', 'Deutsche Bank', 'Bocconi University', 'Operations Research'],
   authors: [{ name: 'Luca Sfragara' }],
   creator: 'Luca Sfragara',
@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     url: 'https://lucasfragara.com',
     siteName: 'Luca Sfragara',
     title: 'Luca Sfragara | MIT Data Science & Machine Learning',
-    description: 'MIT MBAn student specializing in Data Science and Machine Learning. Previously at BCG and Deutsche Bank',
+    description: 'MIT student specializing in Data Science and Machine Learning. Previously at BCG and Deutsche Bank',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Luca Sfragara | MIT Data Science & Machine Learning',
-    description: 'MIT MBAn student specializing in Data Science and Machine Learning. Previously at BCG and Deutsche Bank',
+    description: 'MIT student specializing in Data Science and Machine Learning. Previously at BCG and Deutsche Bank',
   },
   icons: {
     icon: [
@@ -41,7 +41,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Luca Sfragara',
-  jobTitle: 'MIT MBAn Student & Machine Learning Researcher',
+  jobTitle: 'MIT Student & Machine Learning Researcher',
   affiliation: {
     '@type': 'Organization',
     name: 'MIT',
