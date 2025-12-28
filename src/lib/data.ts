@@ -163,6 +163,15 @@ export const projects: Project[] = [
   },
   {
     id: '3',
+    title: 'How Transformers learn grammar - inside the hidden structure of LLMs',
+    description: 'BSc thesis exploring how transformers learn syntax. Training GPT-2 on formal grammars and probing hidden representations to uncover where hierarchical structure emerges.',
+    tags: ['Python', 'PyTorch', 'Transformers', 'NLP'],
+    status: 'completed',
+    github: 'https://github.com/LucaSfragara/Thesis',
+    report: 'https://github.com/LucaSfragara/Thesis/blob/master/Thesis%20%20Final.pdf',
+  },
+  {
+    id: '4',
     title: 'StableSFTData',
     description: 'Sample-efficient LLM fine-tuning for math reasoning: training on hard examples outperforms random selection under fixed compute budgets.',
     tags: ['Python', 'LLM', 'Fine-tuning', 'LoRA'],
@@ -170,15 +179,7 @@ export const projects: Project[] = [
     github: 'https://github.com/LucaSfragara/StableSFTData',
     report: 'https://github.com/LucaSfragara/StableSFTData/blob/main/Report.pdf',
   },
-  {
-    id: '4',
-    title: 'The Hidden Grammar',
-    description: 'BSc thesis exploring how transformers learn syntax. Training GPT-2 on formal grammars and probing hidden representations to uncover where hierarchical structure emerges.',
-    tags: ['Python', 'PyTorch', 'Transformers', 'NLP'],
-    status: 'completed',
-    github: 'https://github.com/LucaSfragara/Thesis',
-    report: 'https://github.com/LucaSfragara/Thesis/blob/master/Thesis%20%20Final.pdf',
-  },
+ 
   {
     id: '5',
     title: 'xAI Hackathon Project',
